@@ -1,1 +1,1 @@
-# Biblioteca-Righi
+# BibliotecaRighi
