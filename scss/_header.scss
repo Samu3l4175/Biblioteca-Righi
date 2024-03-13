@@ -1,0 +1,41 @@
+$blue: #3395FF;
+$red: #E4512E;
+$background: #DCE0E0;
+
+body{
+    display: grid;
+    
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: $background;
+    font-family: "Almarai", sans-serif;
+}
+
+#logo-group{
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+
+    #logo{
+        width: 100px;
+    }
+    #logo-text{
+        color: $blue;
+    }
+}
+
+#top-menu{
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    h1{
+        margin: 25px;
+        font-weight: bold;
+
+        &:hover{
+            color: $blue;
+        }
+    }
+}
