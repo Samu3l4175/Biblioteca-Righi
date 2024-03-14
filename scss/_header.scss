@@ -1,7 +1,3 @@
-$blue: #3395FF;
-$red: #E4512E;
-$background: #DCE0E0;
-
 body{
     display: grid;
     
@@ -10,6 +6,7 @@ body{
     left: 0px;
     background-color: $background;
     font-family: "Almarai", sans-serif;
+    color: $text;
 }
 
 #logo-group{
