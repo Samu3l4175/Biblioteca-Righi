@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap");
 .header {
+  position: static;
+  top: 0px;
+  left: 0px;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -15,6 +18,7 @@
   width: 150px;
 }
 #logo-group #logo-text {
+  font-size: 1.75em;
   color: #E4512E;
 }
 
@@ -23,7 +27,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  font-size: x-large;
+  font-size: 1.75em;
   margin-left: 70px;
 }
 #top-menu a {
@@ -51,7 +55,7 @@
 }
 
 #login-btn {
-  font-size: x-large;
+  font-size: 1.75em;
   position: absolute;
   right: 15%;
 }
@@ -223,6 +227,37 @@
   color: #DCE0E0;
   font-weight: bold;
   font-size: large;
+}
+
+#genre {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 2em;
+  margin: 4em;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carta {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  border: 0.5em #E4512E solid;
+  padding: 1em 3em;
+  border-radius: 1.5em;
+  font-size: 1.1em;
+}
+.carta i, .carta label {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.carta p {
+  line-height: 0.5em;
 }
 
 body {
