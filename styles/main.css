@@ -1,34 +1,267 @@
 @import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap");
-body {
-  display: grid;
-  position: absolute;
+.header {
+  position: static;
   top: 0px;
   left: 0px;
-  background-color: #DCE0E0;
-  font-family: "Almarai", sans-serif;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
 #logo-group {
-  margin-left: 30px;
+  margin-left: 15%;
   display: flex;
   align-items: center;
 }
 #logo-group #logo {
-  width: 100px;
+  translate: 0px -5px;
+  width: 150px;
 }
 #logo-group #logo-text {
-  color: #3395FF;
+  font-size: 1.75em;
+  color: #E4512E;
 }
 
 #top-menu {
   position: relative;
   display: flex;
+  justify-content: start;
   align-items: center;
+  font-size: 1.75em;
+  margin-left: 70px;
 }
-#top-menu h1 {
-  margin: 25px;
+#top-menu a {
+  position: relative;
+  margin-right: 40px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #0D0E0E;
+  cursor: pointer;
+}
+#top-menu a:hover::after {
+  transform: scaleX(1);
+}
+#top-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 4.5px;
+  background-color: #3395FF;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+
+#login-btn {
+  font-size: 1.75em;
+  position: absolute;
+  right: 15%;
+}
+#login-btn a {
+  text-decoration: none;
+  color: #0D0E0E;
+}
+#login-btn button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+#login-btn button:hover::after {
+  transform: scaleX(1);
+}
+#login-btn button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 4.5px;
+  background-color: #3395FF;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+
+.half {
+  height: 100vh;
+  width: 50%;
+  position: absolute;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-half {
+  left: 0px;
+}
+.first-half img {
+  width: 400px;
+  position: absolute;
+  box-shadow: 10px 10px 15px -3px #0D0E0E;
+}
+.first-half #one {
+  translate: -200px -20px;
+  z-index: 10;
+}
+.first-half #two {
+  translate: 250px -170px;
+}
+.first-half #three {
+  translate: 250px 170px;
+  z-index: 20;
+}
+
+.second-half {
+  right: 0px;
+  display: flex;
+  overflow: hidden;
+}
+.second-half div {
+  display: flexbox;
+  width: 40%;
+  color: #0D0E0E;
+}
+.second-half div.login {
+  transform: translateX(0);
+  transition: transform 0.18s ease;
+}
+.second-half div.login.active {
+  transition: none;
+  transform: translateX(-200%);
+}
+.second-half div.register-box {
+  transition: transform 0.18s ease;
+  position: absolute;
+  transform: translateX(0);
+}
+.second-half div.register-box.active {
+  transform: translateX(200%);
+}
+.second-half div .title {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  cursor: default;
+}
+.second-half div .input-box {
+  translate: -33px;
+  width: 100%;
+  height: 50px;
+  margin: 30px;
+  position: relative;
+  border-bottom: 2px solid #0D0E0E;
+}
+.second-half div .input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: large;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.second-half div .input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: large;
+  padding: 0 35px 0 5px;
+}
+.second-half div .input-box input:focus ~ label, .second-half div .input-box input:valid ~ label {
+  top: -5px;
+}
+.second-half div .input-box i {
+  position: absolute;
+  right: 8px;
+  font-size: large;
+  line-height: 57px;
+}
+.second-half div .remember {
+  font-size: large;
+}
+.second-half div .remember input {
+  position: relative;
+  width: 15px;
+  aspect-ratio: 1;
+  cursor: pointer;
+  top: 1px;
+  margin: 0px 10px 0 0;
+}
+.second-half div .forgot, .second-half div .login-change, .second-half div .register-change {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 30px 0;
+  font-size: large;
+}
+.second-half div .forgot a, .second-half div .login-change a, .second-half div .register-change a {
+  text-decoration: none;
+  color: #0D0E0E;
+  cursor: pointer;
+}
+.second-half div .forgot a:hover, .second-half div .forgot a:focus, .second-half div .login-change a:hover, .second-half div .login-change a:focus, .second-half div .register-change a:hover, .second-half div .register-change a:focus {
+  text-decoration: underline;
+}
+.second-half div .forgot a#register, .second-half div .forgot a#login, .second-half div .login-change a#register, .second-half div .login-change a#login, .second-half div .register-change a#register, .second-half div .register-change a#login {
   font-weight: bold;
 }
-#top-menu h1:hover {
-  color: #3395FF;
+.second-half div .login-btn, .second-half div .register-btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.second-half div .login-btn button, .second-half div .register-btn button {
+  width: 100%;
+  height: 60px;
+  border-radius: 50px;
+  border: none;
+  background-color: #3395FF;
+  color: #DCE0E0;
+  font-weight: bold;
+  font-size: large;
+}
+
+#genre {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 2em;
+  margin: 4em;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carta {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  border: 0.5em #E4512E solid;
+  padding: 1em 3em;
+  border-radius: 1.5em;
+  font-size: 1.1em;
+}
+.carta i, .carta label {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.carta p {
+  line-height: 0.5em;
+}
+
+body {
+  background-color: #DCE0E0;
+  font-family: "Almarai", sans-serif;
+  color: #0D0E0E;
 }/*# sourceMappingURL=main.css.map */

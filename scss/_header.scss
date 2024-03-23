@@ -1,38 +1,75 @@
-body{
-    display: grid;
-    
-    position: absolute;
+.header{
+    position: static;
     top: 0px;
     left: 0px;
-    background-color: $background;
-    font-family: "Almarai", sans-serif;
-    color: $text;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 
 #logo-group{
-    margin-left: 30px;
+    margin-left: 15%;
     display: flex;
     align-items: center;
 
     #logo{
-        width: 100px;
+        translate: 0px -5px;
+        width: 150px;
     }
     #logo-text{
-        color: $blue;
+        font-size: 1.75em;
+        color: $red;
     }
 }
 
 #top-menu{
     position: relative;
     display: flex;
+    justify-content: start;
     align-items: center;
+    font-size: 1.75em;
+    margin-left: 70px;
 
-    h1{
-        margin: 25px;
+    a{
+        position: relative;
+        margin-right: 40px;
         font-weight: bold;
+        text-decoration: none;
+        color: $text;
+        cursor: pointer;
 
-        &:hover{
-            color: $blue;
+        &:hover::after{
+            transform: scaleX(1);
+        }
+
+        &::after{
+            @include underline;
+        }
+    }
+}
+
+#login-btn{
+    font-size: 1.75em;
+    position: absolute;
+    right: 15%;
+
+    a{
+        text-decoration: none;
+        color: $text;
+    }
+
+    button{
+        position: relative;
+        background-color: transparent;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover::after{
+            transform: scaleX(1);
+        }
+        &::after{
+            @include underline
         }
     }
 }
